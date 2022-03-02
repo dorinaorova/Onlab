@@ -5,3 +5,5 @@ Próbálgattam a kódot, megnéztem, egyes részei hogy működnek. Az első fut
 Átírtam a kódot úgy, hogy a kártyákhoz már hangot is lehet megadni, azondban nem kötelező. Ehhez egy-egy string propertyt vettem fel a Card osztályba (Question_sound, Answer_sound) a képek mintájára, valamint hozzáadtam egy Migartionnel az adatbázishoz a változásokat (CardWithSound).
 
 A swaggeres felülettel szontén ismerkedtem, viszont a kártyák lekérdezésénél nem jutotttam sokra, mivel 401-Unauthorized hibát kapok. Gyanítom, mivel nincs bejelntkezett felhasználó. Még ismerkedek a rendszerrel és próbálok rájönni, hogyan tudom kikerülni ezt.
+
+Elkészítettem a github repot, ahova az egész kódot feltettem, itt fogok dolgozni majd.
