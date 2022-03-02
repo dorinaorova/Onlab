@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\FlashcardTests\\FlashcardTests.csproj": {}
+    "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\FlashcardTests\\FlashcardTests.csproj": {}
   },
   "projects": {
-    "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\FlashcardTests\\FlashcardTests.csproj": {
+    "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\FlashcardTests\\FlashcardTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
+        "projectUniqueName": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
         "projectName": "FlashcardTests",
-        "projectPath": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
-        "packagesPath": "C:\\Users\\Arctic\\.nuget\\packages\\",
-        "outputPath": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\FlashcardTests\\obj\\",
+        "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
+        "packagesPath": "C:\\Users\\Dorina\\.nuget\\packages\\",
+        "outputPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\FlashcardTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Arctic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dorina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,9 +26,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\Flashcard.csproj": {
-                "projectPath": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\Flashcard.csproj"
+              "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\Flashcard.csproj": {
+                "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\Flashcard.csproj"
               }
             }
           }
@@ -44,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -81,31 +80,25 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.211\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\Flashcard.csproj": {
+    "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\Flashcard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\Flashcard.csproj",
+        "projectUniqueName": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\Flashcard.csproj",
         "projectName": "Flashcard",
-        "projectPath": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\Flashcard.csproj",
-        "packagesPath": "C:\\Users\\Arctic\\.nuget\\packages\\",
-        "outputPath": "D:\\BME\\9.felev\\Szakdolgozat\\git\\Tanulokartyak\\Flashcard\\Flashcard\\obj\\",
+        "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\Flashcard.csproj",
+        "packagesPath": "C:\\Users\\Dorina\\.nuget\\packages\\",
+        "outputPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Tanulokartya-main\\Flashcard\\Flashcard\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Arctic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dorina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,6 +110,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -128,6 +122,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "DinkToPdf": {
               "target": "Package",
@@ -200,7 +195,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.211\\RuntimeIdentifierGraph.json"
         }
       }
     }

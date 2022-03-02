@@ -121,6 +121,9 @@ namespace Flashcard.Migrations
                     b.Property<string>("Answer_picture")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Answer_sound")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Answer_text")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -132,6 +135,9 @@ namespace Flashcard.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Question_picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Question_sound")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Question_text")
