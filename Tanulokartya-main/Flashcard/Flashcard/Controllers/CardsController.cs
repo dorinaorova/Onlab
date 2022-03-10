@@ -109,14 +109,15 @@ namespace Flashcard.Controllers
                 _logger.LogError("ModelState is invalid in the CreateCard() method");
                 return BadRequest(ModelState);
             }
-            var card = new Card
-            {
+            var card = new Card {
                 Type = cardDTO.Type,
                 Card_number = cardDTO.Card_number,
                 Question_text = cardDTO.Question_text,
                 Question_picture = cardDTO.Question_picture,
+                Question_sound = cardDTO.Question_sound,
                 Answer_text = cardDTO.Answer_text,
                 Answer_picture = cardDTO.Answer_picture,
+                Answer_sound = cardDTO.Answer_sound,
                 DeckId = cardDTO.Deck.Id
             };
 
@@ -153,6 +154,8 @@ namespace Flashcard.Controllers
             card.Answer_picture = cardDTO.Answer_picture;
             card.Question_text = cardDTO.Question_text;
             card.Question_picture = cardDTO.Question_picture;
+            card.Question_sound = cardDTO.Question_sound;
+            card.Answer_sound = cardDTO.Answer_sound;
 
             try
             {
@@ -248,6 +251,8 @@ namespace Flashcard.Controllers
             Card_number = card.Card_number,
             Question_text = card.Question_text,
             Question_picture = card.Question_picture,
+            Question_sound = card.Question_sound,
+            Answer_sound = card.Answer_sound,
             Answer_text = card.Answer_text,
             Answer_picture = card.Answer_picture,
             Deck = new DeckInfoDTO()
@@ -271,6 +276,8 @@ namespace Flashcard.Controllers
             Card_number = card.Card_number,
             Question_text = card.Question_text,
             Question_picture = card.Question_picture,
+            Question_sound = card.Question_sound,
+            Answer_sound = card.Answer_sound,
             Answer_text = card.Answer_text,
             Answer_picture = card.Answer_picture,
             DeckId = card.Deck.Id

@@ -27,10 +27,13 @@ export class CardElementComponent implements OnInit {
   id: number;
   question_picture: string;
   answer_picture: string;
+  question_sound: string;
+  answer_sound: string;
   currentUser: User;
   
   form: FormGroup;
   formComment: string;
+    sound: HTMLAudioElement;
 
   constructor(private cardService: CardService, private commentService: CommentService, private formBuilder: FormBuilder, private avRoute: ActivatedRoute, private _location: Location, private authenticationService: AuthenticationService) {
     const idParam = 'id';
@@ -56,6 +59,8 @@ export class CardElementComponent implements OnInit {
     this.cardService.getCard(this.id).subscribe(res => {
       this.question_picture = res.question_picture;
       this.answer_picture = res.answer_picture;
+      this.question_sound = res.question_sound;
+      this.answer_sound = res.answer_sound;
     });
   }
 
@@ -78,8 +83,26 @@ export class CardElementComponent implements OnInit {
     return this.answer_picture != "";
   }
 
+  get isQuestionSound() {
+    return this.question_sound != "";
+  }
+  get isAnswerSound() {
+    return this.answer_sound != "";
+  }
+
   public createImgPath = (serverPath: string) => {
       return `${environment.apiBaseUrl}/${serverPath}`;
+  }
+
+  public createSoundPath = (serverPath: string) => {
+    return `${environment.apiBaseUrl}/${serverPath}`;
+  }
+  playSound() {
+    this.sound = new Audio();
+    this.sound.src = this.createSoundPath(this.question_sound);
+    this.sound.load;
+    this.sound.play;
+
   }
 
   backClicked() {

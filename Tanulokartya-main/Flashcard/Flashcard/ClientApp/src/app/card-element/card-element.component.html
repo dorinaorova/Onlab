@@ -10,11 +10,14 @@
       <div class="col align-self-center border-right">
         <h4 [innerHTML]="card.question_text">{{ card.question_text }} </h4><br>
         <img *ngIf="isQuestionPicture" class="center" [src]="createImgPath(card.question_picture)" alt="question picture" style="width:45%">
-      </div>      
+      </div>
       <div class="col align-self-center">
         <h4 [innerHTML]="card.answer_text"> {{ card.answer_text }} </h4><br>
         <img *ngIf="isAnswerPicture" class="center" [src]="createImgPath(card.answer_picture)" alt="question picture" style="width:45%">
       </div>
+    </div>
+    <div class="col align-self-center border-right">
+      <button class="btn btn-secondary" onclick="playsound()">Hang</button>
     </div>
   </div>
 </div>

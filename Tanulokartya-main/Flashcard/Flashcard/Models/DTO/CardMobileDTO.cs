@@ -16,6 +16,9 @@
 
         public string Answer_picture { get; set; }
 
+        public string Question_sound { get; set; }
+        public string Answer_sound { get; set; }
+
         public int DeckId { get; set; }
     }
 }

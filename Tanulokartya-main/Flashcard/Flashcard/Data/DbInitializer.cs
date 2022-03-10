@@ -166,6 +166,8 @@ namespace Flashcard.Data
                     Question_text = "Mit látsz az avarban?",
                     Question_picture = "Resources\\Images\\sün.jpg",
                     Answer_text = "Sün",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\sün.jpg",
                     DeckId = 1
                 },
@@ -176,6 +178,8 @@ namespace Flashcard.Data
                     Question_text = "Melyik gyümölcs a kakukktojás? Miért?",
                     Question_picture = "Resources\\Images\\gyümölcs.png",
                     Answer_text = "Cseresznye, mert nyári gyümölcs.",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\gy_5.png",
                     DeckId = 1
                 },
@@ -186,6 +190,8 @@ namespace Flashcard.Data
                     Question_text = "Mi nem való az íróasztalra?",
                     Question_picture = "Resources\\Images\\a.png",
                     Answer_text = "Szendvics",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\a_2.png",
                     DeckId = 1
                 },
@@ -196,6 +202,8 @@ namespace Flashcard.Data
                     Question_text = "Melyik falevél ugyanolyan, mint az első?",
                     Question_picture = "Resources\\Images\\levél.png",
                     Answer_text = "Az utolsó",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\levél_1.png",
                     DeckId = 1
                 },
@@ -206,6 +214,8 @@ namespace Flashcard.Data
                     Question_text = "Hányadik mókus különbözik a többitől?",
                     Question_picture = "Resources\\Images\\mókus.png",
                     Answer_text = "A második. (2.)",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\mokus_2.png",
                     DeckId = 1
                 },
@@ -216,6 +226,8 @@ namespace Flashcard.Data
                     Question_text = "Melyik állat részleteit látod?",
                     Question_picture = "Resources\\Images\\őz.png",
                     Answer_text = "Az őz",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\őz_válasz.png",
                     DeckId = 1
                 },
@@ -226,6 +238,8 @@ namespace Flashcard.Data
                     Question_text = "Húzd végig a mutatóujjad a csigavonalon! A zöldnél kezdj!",
                     Question_picture = "Resources\\Images\\csigavonal.png",
                     Answer_text = "-",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\csigavonal.png",
                     DeckId = 1
                 },
@@ -236,6 +250,8 @@ namespace Flashcard.Data
                     Question_text = "Melyik formához hasonlítható a dió?",
                     Question_picture = "Resources\\Images\\forma.png",
                     Answer_text = "A gömb alakhoz.",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_picture = "Resources\\Images\\forma_2.png",
                     DeckId = 1
                 },
@@ -245,6 +261,8 @@ namespace Flashcard.Data
                     Card_number = 9,
                     Question_text = "Se ablaka, se ajtaja, mégis négyen laknak benne. Mi az?",
                     Question_picture = "",
+                    Question_sound ="",
+                    Answer_sound ="",
                     Answer_text = "A dió",
                     Answer_picture = "Resources\\Images\\dio.png",
                     DeckId = 1
@@ -256,6 +274,8 @@ namespace Flashcard.Data
                     Question_text = "Ez a Te kártyád! Mondd a mondókát, és kísérd mozdulatokkal! Ereszkedik le a felhő, hull a fára őszi eső. Hull a fának a levele, mégis szól a fülemüle.",
                     Question_picture = "",
                     Answer_text = "-",
+                    Question_sound = "",
+                    Answer_sound = "",
                     Answer_picture = "Resources\\Images\\mondoka.png",
                     DeckId = 1
                 },

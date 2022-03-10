@@ -26,7 +26,9 @@ export class CardFormComponent implements OnInit {
     formQuestion_text: string;
     formQuestion_picture: string;
     formAnswer_text: string;
-    formAnswer_picture: string;
+  formAnswer_picture: string;
+  formQuestion_sound: string;
+  formAnswer_sound: string;
     id: number;
     errorMessage: any;
     error = '';
@@ -57,6 +59,8 @@ export class CardFormComponent implements OnInit {
         this.formType = 'type';
         this.formQuestion_text = 'question_text';
         this.formQuestion_picture = 'question_picture';
+        //this.formQuestion_sound = 'question_sound';
+        //this.formAnswer_sound = 'answer_sound';
         this.formAnswer_text = 'answer_text';
         this.formAnswer_picture = 'answer_picture';
         
@@ -155,6 +159,8 @@ export class CardFormComponent implements OnInit {
           question_picture: "",
           answer_text: this.form.get(this.formAnswer_text).value,
           answer_picture: "",
+          question_sound: "",
+          answer_sound: "",
           deckId: Number(this.deckId),
           deck: this.deck
         };
@@ -180,6 +186,9 @@ export class CardFormComponent implements OnInit {
           question_picture: this.QuestionPicture,
           answer_text: this.form.get(this.formAnswer_text).value,
           answer_picture: this.AnswerPicture,
+          //TODO
+          question_sound: "",
+          answer_sound: "",
           deckId: this.existingCard.deckId,
           deck: this.existingCard.deck
         };
