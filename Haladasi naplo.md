@@ -8,7 +8,7 @@ A swaggeres felülettel szontén ismerkedtem, viszont a kártyák lekérdezésé
 
 Elkészítettem a github repot, ahova az egész kódot feltettem, itt fogok dolgozni majd.
 
-##4
+## 4.hét
 A backendel nem foglalkoztam sokat, főként az adatbázissal szenvedtem. Valamiért a kártya sound-jai nullként kerültek be, pedig az inicializáló osztályban (ahogy a képeknél is) üres stringként szerepel. Ezt kódból nem is tudtam kijavítani, így végül kézzel ítam át. Ezen kívül szerintem itt minden jól működik, midnenhol átírtam a kódot.
 
 A héten nagyrészt a kliensoldalon dolgoztam. Nem foglalkoztam még Angularral se TypeScriptel, így sok nehézségbe ütköztem. Próbáltam átlátni, hogy mi hol van, hogy működik, de még nem teljesen értem. Sokszor kaptam ezt a hibát:
