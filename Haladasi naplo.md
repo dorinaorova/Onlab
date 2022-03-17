@@ -16,3 +16,8 @@ A héten nagyrészt a kliensoldalon dolgoztam. Nem foglalkoztam még Angularral 
 ![image](https://user-images.githubusercontent.com/71429144/157693451-0142a4ac-0bc8-44e5-aa14-8f2cca9705da.png)
 
 Kiderült, hogy az új kártya létrehozásánál volt a gond, de emiatt semmi sem töltött be. Miután ezt kijavítottam, már rendesen működött. Hozzáadtam a kártyák nézetéhez egy gombot, ami lenyomásakor lejátsza a question_sound-ként kapott hangot. Ez egyenlőre nem működik, még nem tudom, hogyan kellene hangot lejátszani. Sokat kutattam ezután, és többféle dolgot is kipróbáltam, de még nincs meg a jó megoldás.
+
+## 5.hét
+A card-element.component.html módosításán dolgoztam legfőképp, egy új sorban most megjelenik egy hangot lejátszó rész. Az mp3-k lejátszása már teljesen jól működik. Azt próbáltam megoldani, hogy akkor ez ne jelenlen meg, ha nincs az adott kártyához hang, de még nem jutottam vele megoldásra. A képek mintájára írtam meg az hangfájlok elérési útvonalát meghatározó függvényt. Egyenlőre van külön kérdés- és válasz hang a kártyákhoz, de nem vagyok benne biztos, hogy erre szükség van.
+
+Arra továbbra sem jöttem rá, hogy kódból üres stringek helyett mirét NULL-ként szúrta be a hang attribútumokat az adatbázisba. 
