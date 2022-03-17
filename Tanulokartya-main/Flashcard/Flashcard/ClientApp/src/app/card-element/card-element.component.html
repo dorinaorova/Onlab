@@ -17,7 +17,9 @@
       </div>
     </div>
     <div class="col align-self-center border-right">
-      <button class="btn btn-secondary" onclick="playsound()">Hang</button>
+      <audio controls>
+        <source [src]="createSoundPath(card.question_sound)" type="audio/mp3" />
+      </audio>
     </div>
   </div>
 </div>
