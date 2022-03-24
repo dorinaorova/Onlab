@@ -59,8 +59,8 @@ export class CardFormComponent implements OnInit {
         this.formType = 'type';
         this.formQuestion_text = 'question_text';
         this.formQuestion_picture = 'question_picture';
-        //this.formQuestion_sound = 'question_sound';
-        //this.formAnswer_sound = 'answer_sound';
+        this.formQuestion_sound = 'question_sound';
+        this.formAnswer_sound = 'answer_sound';
         this.formAnswer_text = 'answer_text';
         this.formAnswer_picture = 'answer_picture';
         
@@ -144,6 +144,16 @@ export class CardFormComponent implements OnInit {
         }
         return false; // disabled
     }
+  isSoundEditable() {
+    if ((this.currentUser.roles.includes("Card creator") && this.deckStatus == 0) ||
+      (this.currentUser.roles.includes("Graphic") && this.deckStatus == 1) ||
+      (this.currentUser.roles.includes("Main Graphic") && this.deckStatus == 1) ||
+      (this.currentUser.roles.includes("Professional reviewer") && this.deckStatus == 2) ||
+      (this.currentUser.roles.includes("Main Professional reviewer") && this.deckStatus == 2)) {
+      return true; // enabled
+    }
+    return false; // disabled
+  }
 
     save() {        
       this.submitted = true;
@@ -166,9 +176,11 @@ export class CardFormComponent implements OnInit {
         };
         if(this.response !== undefined) {
           card.question_picture = this.response.dbPath;
+          card.question_sound = this.response.dbPath;
         }
         if(this.response_answer !== undefined) {
           card.answer_picture = this.response_answer.dbPath;
+          card.answer_sound = this.response.dbPath;
         }
         
         this.cardService.addCard(card)
@@ -186,17 +198,18 @@ export class CardFormComponent implements OnInit {
           question_picture: this.QuestionPicture,
           answer_text: this.form.get(this.formAnswer_text).value,
           answer_picture: this.AnswerPicture,
-          //TODO
-          question_sound: "",
-          answer_sound: "",
+          question_sound: this.QuestionSound,
+          answer_sound: this.AnswerSound,
           deckId: this.existingCard.deckId,
           deck: this.existingCard.deck
         };
         if(this.response !== undefined) {
           card.question_picture = this.response.dbPath;
+          card.question_sound= this.response.dbPath;
         }
         if(this.response_answer !== undefined) {
           card.answer_picture = this.response_answer.dbPath;
+          card.answer_sound = this.response_answer.dbPath;
         }
 
         this.cardService.updateCard(card.id, card)
@@ -209,8 +222,10 @@ export class CardFormComponent implements OnInit {
       get type() { return this.form.get(this.formType); }
       get question_text() { return this.form.get(this.formQuestion_text); }
       get question_picture() { return this.form.get(this.formQuestion_picture); }
+      get question_sound() { return this.form.get(this.formQuestion_sound); }
       get answer_text() { return this.form.get(this.formAnswer_text); }
       get answer_picture() { return this.form.get(this.formAnswer_picture); }
+      get answer_sound() { return this.form.get(this.formAnswer_sound); }
 
       get isQuestionPicture() {
         return this.existingCard.question_picture !== "";
@@ -221,12 +236,34 @@ export class CardFormComponent implements OnInit {
         }
         else return "";
       }
+
+      get isQuestionSound() {
+        return this.existingCard.question_sound !== "";
+      }
+      get QuestionSound() {
+        if (this.existingCard.question_sound !== "") {
+          return this.existingCard.question_sound;
+        }
+        else return "";
+      }
+
       get isAnswerPicture() {
         return this.existingCard.answer_picture !== "";
       }
+
       get AnswerPicture() {
         if(this.existingCard.answer_picture !== "") {
           return this.existingCard.answer_picture;
+        }
+        else return "";
+      }
+
+        get isAnswerSound() {
+          return this.existingCard.answer_sound !== "";
+        }
+      get AnswerSound() {
+        if (this.existingCard.answer_sound !== "") {
+          return this.existingCard.answer_sound;
         }
         else return "";
       }
@@ -248,15 +285,28 @@ export class CardFormComponent implements OnInit {
           return `${environment.apiBaseUrl}/${serverPath}`;
       }
 
+      public createSoundPath = (serverPath: string) => {
+        return `${environment.apiBaseUrl}/${serverPath}`;
+      }
+
       handleEditorInit(e) {
         this.editorSubject.next(e.editor);
         this.editorSubject.complete();
       }
 
-      delete(id, type) {
+      deletePicture(id, type) {
         const ans = confirm('Biztosan törölni akarod az eddigi képet?');
         if (ans) {
           this.cardService.deleteCardPicture(id, type).subscribe((data) => {
+            this.loadExistingCard();
+          });
+        }
+      }
+
+      deleteSound(id, type) {
+        const ans = confirm('Biztosan törölni akarod az eddigi hangot?');
+        if (ans) {
+          this.cardService.deleteCardSound(id, type).subscribe((data) => {
             this.loadExistingCard();
           });
         }

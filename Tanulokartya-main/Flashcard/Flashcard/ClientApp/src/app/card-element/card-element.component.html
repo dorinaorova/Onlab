@@ -16,10 +16,17 @@
         <img *ngIf="isAnswerPicture" class="center" [src]="createImgPath(card.answer_picture)" alt="question picture" style="width:45%">
       </div>
     </div>
-    <div class="col align-self-center border-right">
-      <audio controls>
-        <source [src]="createSoundPath(card.question_sound)" type="audio/mp3" />
-      </audio>
+    <div class="row">
+      <div class="col align-self-center">
+        <audio controls *ngIf="isQuestionSound">
+          <source  [src]="createSoundPath(card.question_sound)" type="audio/mp3" />
+        </audio>
+      </div>
+      <div class="col align-self-center ">
+        <audio controls *ngIf="isAnswerSound">
+          <source [src]="createSoundPath(card.answer_sound)" type="audio/mp3" />
+        </audio>
+      </div>
     </div>
   </div>
 </div>

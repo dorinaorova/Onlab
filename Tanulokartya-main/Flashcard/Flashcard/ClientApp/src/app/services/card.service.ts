@@ -87,7 +87,16 @@ export class CardService {
                 retry(1),
                 catchError(this.errorHandler)
             );
+  }
+
+    deleteCardSound(id: number, type: string): Observable<Card> {
+      return this.http.put<Card>(this.myAppUrl + this.myApiUrl + "DeleteCardSound/" + id + "/" + type, this.httpOptions)
+        .pipe(
+          retry(1),
+          catchError(this.errorHandler)
+        );
     }
+
 
     errorHandler(error) {
         let errorMessage = '';
