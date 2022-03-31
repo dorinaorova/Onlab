@@ -3,7 +3,6 @@ C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flas
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.runtimeconfig.dev.json
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\appsettings.json
-C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.StaticWebAssets.xml
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\assets\styles.css
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.exe
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -282,3 +281,4 @@ C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flas
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.pdb
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.genruntimeconfig.cache
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\Tanulokartya-main\Flashcard\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.StaticWebAssets.xml

@@ -52,7 +52,7 @@ export class UploadSoundComponent implements OnInit {
             let fileToUploadName = currentDate + "_" + fileToUpload.name;
             formData.append('file', fileToUpload, fileToUploadName);
 
-            this.http.post(`${environment.apiBaseUrl}/api/Upload`, formData, { reportProgress: true, observe: 'events' })
+            this.http.post(`${environment.apiBaseUrl}/api/UploadAudio`, formData, { reportProgress: true, observe: 'events' })
               .subscribe(event => {
                 if (event.type === HttpEventType.UploadProgress)
                   this.progress = Math.round(100 * event.loaded / event.total);
