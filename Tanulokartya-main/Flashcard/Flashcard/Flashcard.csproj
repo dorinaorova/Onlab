@@ -95,10 +95,13 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\services\card.service.ts" />
+    <None Remove="ClientApp\src\app\upload-sound\upload-sound.component.ts" />
+    <None Remove="ClientApp\src\app\upload\upload.sound.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\services\card.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\upload-sound\upload-sound.component.ts" />
   </ItemGroup>
 
   <ItemGroup>

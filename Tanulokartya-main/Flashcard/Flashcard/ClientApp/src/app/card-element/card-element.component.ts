@@ -95,7 +95,9 @@ export class CardElementComponent implements OnInit {
   }
 
   public createSoundPath = (serverPath: string) => {
+    console.log(serverPath);
     return `${environment.apiBaseUrl}/${serverPath}`;
+    
   }
   playSound() {
     this.sound = new Audio();

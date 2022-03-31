@@ -232,6 +232,39 @@ namespace Flashcard.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// This function deletes an existing card's specified picture.
+        /// </summary>
+        // PUT: api/Cards/DeleteCardPicture/2/type
+        [Authorize(Roles = "Card creator,Lector,Main Lector,Graphic,Main Graphic,Professional reviewer,Main Professional reviewer")]
+        [ActionName("DeleteCardSound")]
+        [HttpPut("[action]/{id}/{type}")]
+        public async Task<ActionResult> DeleteCardSound([FromRoute] int id, [FromRoute] string type) {
+            var card = await _context.Cards.FindAsync(id);
+
+            if (card == null) {
+                _logger.LogWarning("Card not found in the DeleteCardSound({0}) method", id);
+                return NotFound();
+            }
+
+            if (type == "question") {
+                card.Question_sound = "";
+            }
+            else if (type == "answer") {
+                card.Answer_sound = "";
+            }
+
+            try {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException) when (!CardExists(id)) {
+                return NotFound();
+            }
+
+            _logger.LogInformation("Deleting card sound in the DeleteCardSound({0}) method", id);
+            return NoContent();
+        }
+
         #region helperMethods
 
         /// <summary>

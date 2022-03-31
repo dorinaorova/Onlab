@@ -15,14 +15,13 @@ export class UploadComponent implements OnInit {
   public message: string;
   public message_error: string;
   errorflag: boolean;
-  fileType: boolean; //true= hang, false = kep
   @Output() public onUploadFinished = new EventEmitter();
  
   constructor(private http: HttpClient) { }
  
   ngOnInit() {
     this.errorflag = true;
-    this.fileType = false;
+
   }
  
   /**
@@ -37,46 +36,47 @@ export class UploadComponent implements OnInit {
       let file = files[0];
 
       // File extension validation
-      this.message_error = 'A kép csak jpg, jpeg, vagy png kiterjesztésű lehet!';
-      var _validFileExtensions = ["jpg", "jpeg", "png", "mp3"];
+      this.message_error = 'Nem jó a fájlformátum!';
+      var _validFileExtensions = ["jpg", "jpeg", "png"];
       for (var j = 0; j < _validFileExtensions.length; j++) {
         var sCurExtension = _validFileExtensions[j];
         if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-          if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == "mp3") {
-            this.fileType = true;
-          }
+          //if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == "audio/mpeg") {
+          //  this.isSound = true;
+          //}
           this.errorflag = false;
           this.message_error = '';
         }
       }
       if (this.errorflag == false) {
-        if (this.fileType == true) {
-          let sound = new Audio();
-          sound.src = window.URL.createObjectURL(file);
-          reader.readAsDataURL(file);
-          setTimeout(() => {
-            this.message_error = "";
-            let fileToUpload = <File>files[0];
-            const formData = new FormData();
-            let date = new Date();
-            let currentDate = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate() + "_" + date.getHours();
-            let fileToUploadName = currentDate + "_" + fileToUpload.name;
-            formData.append('file', fileToUpload, fileToUploadName);
+        //if (this.isSound == true) {
+          
+        //  let sound = new Audio();
+        //  sound.src = window.URL.createObjectURL(file);
+        //  reader.readAsDataURL(file);
+        //  setTimeout(() => {
+        //    this.message_error = "";
+        //    let fileToUpload = <File>files[0];
+        //    const formData = new FormData();
+        //    let date = new Date();
+        //    let currentDate = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate() + "_" + date.getHours();
+        //    let fileToUploadName = currentDate + "_" + fileToUpload.name;
+        //    formData.append('file', fileToUpload, fileToUploadName);
 
-            this.http.post(`${environment.apiBaseUrl}/api/Upload`, formData, { reportProgress: true, observe: 'events' })
-              .subscribe(event => {
-                if (event.type === HttpEventType.UploadProgress)
-                  this.progress = Math.round(100 * event.loaded / event.total);
-                else if (event.type === HttpEventType.Response) {
-                  this.message_error = '';
-                  this.message = 'Sikeres feltöltés!';
-                  this.onUploadFinished.emit(event.body);
-                  this.errorflag = true;
-                }
-              });
-            }, 2000);
-        }
-        else {
+        //    this.http.post(`${environment.apiBaseUrl}/api/Upload`, formData, { reportProgress: true, observe: 'events' })
+        //      .subscribe(event => {
+        //        if (event.type === HttpEventType.UploadProgress)
+        //          this.progress = Math.round(100 * event.loaded / event.total);
+        //        else if (event.type === HttpEventType.Response) {
+        //          this.message_error = '';
+        //          this.message = 'Sikeres feltöltés!';
+        //          this.onUploadFinished.emit(event.body);
+        //          this.errorflag = true;
+        //        }
+        //      });
+        //    }, 2000);
+        //}
+        //else {
           let img = new Image();
           img.src = window.URL.createObjectURL(file);
           reader.readAsDataURL(file);
@@ -115,7 +115,7 @@ export class UploadComponent implements OnInit {
               }
             }, 2000);
           };
-        }
+       // }
       }      
     }
   }

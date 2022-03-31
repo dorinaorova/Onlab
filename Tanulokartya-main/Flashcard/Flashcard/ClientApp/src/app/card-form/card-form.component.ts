@@ -26,9 +26,9 @@ export class CardFormComponent implements OnInit {
     formQuestion_text: string;
     formQuestion_picture: string;
     formAnswer_text: string;
-  formAnswer_picture: string;
-  formQuestion_sound: string;
-  formAnswer_sound: string;
+    formAnswer_picture: string;
+    formQuestion_sound: string;
+    formAnswer_sound: string;
     id: number;
     errorMessage: any;
     error = '';
@@ -48,8 +48,10 @@ export class CardFormComponent implements OnInit {
     private editorSubject: Subject<any> = new AsyncSubject();
 
     // File upload
-    public response: {dbPath: ''};
+    public response_im: {dbPath: ''};
+    public response_s: {dbPath: ''};
     public response_answer: {dbPath: ''};
+    public response_answer_s: {dbPath: ''};
 
     constructor(private cardService: CardService, private deckService: DeckService, private formBuilder: FormBuilder, private avRoute: ActivatedRoute, 
       private router: Router, private authenticationService: AuthenticationService) {
@@ -174,13 +176,17 @@ export class CardFormComponent implements OnInit {
           deckId: Number(this.deckId),
           deck: this.deck
         };
-        if(this.response !== undefined) {
-          card.question_picture = this.response.dbPath;
-          card.question_sound = this.response.dbPath;
+        if(this.response_im !== undefined) {
+          card.question_picture = this.response_im.dbPath;
+        }
+        if (this.response_s !== undefined) {
+          card.question_sound = this.response_s.dbPath;
         }
         if(this.response_answer !== undefined) {
           card.answer_picture = this.response_answer.dbPath;
-          card.answer_sound = this.response.dbPath;
+        }
+        if (this.response_answer_s !== undefined) {
+          card.answer_sound = this.response_answer_s.dbPath;
         }
         
         this.cardService.addCard(card)
@@ -203,13 +209,17 @@ export class CardFormComponent implements OnInit {
           deckId: this.existingCard.deckId,
           deck: this.existingCard.deck
         };
-        if(this.response !== undefined) {
-          card.question_picture = this.response.dbPath;
-          card.question_sound= this.response.dbPath;
+        if (this.response_im !== undefined) {
+          card.question_picture = this.response_im.dbPath;
         }
-        if(this.response_answer !== undefined) {
+        if (this.response_s !== undefined) {
+          card.question_sound = this.response_s.dbPath;
+        }
+        if (this.response_answer !== undefined) {
           card.answer_picture = this.response_answer.dbPath;
-          card.answer_sound = this.response_answer.dbPath;
+        }
+        if (this.response_answer_s !== undefined) {
+          card.answer_sound = this.response_answer_s.dbPath;
         }
 
         this.cardService.updateCard(card.id, card)
@@ -274,12 +284,20 @@ export class CardFormComponent implements OnInit {
 
       // File upload
       public uploadFinished = (event) => {
-        this.response = event;
+        this.response_im = event;
+  }
+
+      public uploadFinishedS = (event) => {
+        this.response_s = event;
       }
 
       public uploadFinishedAnswer = (event) => {
         this.response_answer = event;
       }
+      public uploadFinishedAnswerS = (event) => {
+        this.response_answer_s = event;
+      }
+
 
       public createImgPath = (serverPath: string) => {
           return `${environment.apiBaseUrl}/${serverPath}`;

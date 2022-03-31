@@ -59,7 +59,7 @@
       </editor>
     </div>
   </div>
-
+  
   <div class="form-group row" *ngIf="isPictureEditable()">
     <label class=" control-label col-md-12">Kérdés kép (opcionális)</label>
     <div class="col-md-12">
@@ -68,22 +68,25 @@
         <a *ngIf="isQuestionPicture" [routerLink]="" (click)="deletePicture(cardId, 'question')" class="btn btn-danger button">Törlés</a>
       </div>
       <div>
-        <!-- Upload image component -->
+        <!-- Upload question image component -->
         <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
       </div>
     </div>
   </div>
+
+  <!--Question sound-->
   <div class="form-group row" *ngIf="isSoundEditable()">
     <label class="control-label col-md-12">Kérdés hang (opcionális)</label>
     <div class="col-md-12">
       <div *ngIf="actionType!='Új'">
-        <audio controls *ngIf="isAnswerSound" class="center" alt="question_sound">
-          <source [src]="createSoundPath(card.answer_sound)" type="audio/mp3" />
+        <audio controls *ngIf="isQuestionSound" class="center" alt="question_sound">
+          <source [src]="createSoundPath(card.question_sound)" type="audio/mp3" />
         </audio>
         <a *ngIf="isQuestionSound" [routerLink]="" (click)="deleteSound(cardId, 'question')" class="btn btn-danger button">Törlés</a>
       </div>
       <div>
-        <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+        <!-- Upload question sound component -->
+        <app-uploadSound (onUploadFinished)="uploadFinishedS($event)" ></app-uploadSound>
       </div>
     </div>
   </div>
@@ -145,6 +148,7 @@
       </div>
     </div>
   </div>
+
   <div class="form-group row" *ngIf="isSoundEditable()">
     <label class="control-label col-md-12">Kérdés hang (opcionális)</label>
     <div class="col-md-12">
@@ -152,10 +156,11 @@
         <audio controls *ngIf="isAnswerSound" class="center" alt="question_sound">
           <source [src]="createSoundPath(card.answer_sound)" type="audio/mp3" />
         </audio>
-        <a *ngIf="isQuestionSound" [routerLink]="" (click)="deleteSound(cardId, 'question')" class="btn btn-danger button">Törlés</a>
+        <a *ngIf="isAnswerSound" [routerLink]="" (click)="deleteSound(cardId, 'question')" class="btn btn-danger button">Törlés</a>
       </div>
       <div>
-        <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+        <!-- Upload answer sound component -->
+        <app-uploadSound (onUploadFinished)="uploadFinishedAnswerS($event)"></app-uploadSound>
       </div>
     </div>
   </div>

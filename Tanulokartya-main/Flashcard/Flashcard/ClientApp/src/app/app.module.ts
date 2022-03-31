@@ -21,13 +21,13 @@ import { UploadComponent } from './upload/upload.component';
 import { DeckAssignmentListComponent } from './deck-assignment-list/deck-assignment-list.component';
 import { DeckAssignmentFormComponent } from './deck-assignment-form/deck-assignment-form.component';
 import { ActivatedDeckListComponent } from './activated-deck-list/activated-deck-list.component';
-
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { appRoutingModule } from './app.routing';
 import { FilterPipe } from './helpers/filter.pipe';
 import { FilterBoolPipe } from './helpers/filter-bool.pipe';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { UploadSoundComponent } from './upload-sound/upload-sound.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +42,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     UserListComponent, 
     UserFormComponent,
     UploadComponent,
+    UploadSoundComponent,
     LoginPageComponent,
     DeckAssignmentFormComponent,
     DeckAssignmentListComponent,
