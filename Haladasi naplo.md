@@ -32,11 +32,15 @@ A múlt heti munkát folytatva a kártyák szerkesztési felületén dolgoztam. 
 A hangok feltöltése nem ment zökkenőmentesen, sok különböző osztályt kellett módosítanom. Ezeket a részeket nehézkes volt megtalálni, az idő nagyrészét ezzel töltöttem. Létrehoztam a Resources mappán belül egy Sounds mappát, a hang fájlokat már ide tölti fel. Sz elnevezésük a képek mintájára történik.
 A frontenden az upload-sound.componenteken sokat kellett dolgozni, sok olyan hibát írt amit nem tudtam értelmezni. Többek között ezt írja: 
 ![image](https://user-images.githubusercontent.com/71429144/160946719-1daadb7b-8d69-4c1f-94d9-ffacaadf4845.png)
-Nem sikerült rájönnöm miért, ugaynis a tsconfig.json fájlban engedélyezve van ez. Ettől függetlenül lefut a program, és jól működik.
+Nem sikerült rájönnöm miért, ugyanis a tsconfig.json fájlban engedélyezve van ez. Ettől függetlenül lefut a program, és jól működik.
 Sokszor ütköztem továbbá abba a hibába, hogy többszöri futtatásra máshogy viselkedett a program (nem engedett képet felölteni, vagy hiányzott a kérdés-válasz szöveget szerkesztő mező).
 
 ### 8.hét
-A hangok feltöltése már teljesen jól működik, ehhez a backenden egy külön UploadAudioController osztályt hoztam létre, az UploadController mintájára. Az 'api/UploadAudioController'-re érkező kéréseket dolgozza fel: elvégzi a fájl átnevezését, majd azt a Resources/ Sounds mappába helyezi el. Válaszként, az UploadController-hez hasonlóan OK választ ad ha sikerült a kérést teljesíteni, ellenben BadRequest-et.
+A hangok feltöltése már teljesen jól működik, ehhez a backenden egy külön UploadAudioController osztályt hoztam létre, az UploadController mintájára. Az 'api/UploadAudioController'-re érkező kéréseket dolgozza fel: elvégzi a fájl átnevezését, majd azt a Resources/ Sounds mappába helyezi el. 
+![image](https://user-images.githubusercontent.com/71429144/164445207-9d2fe054-3cf1-4192-beb5-a15bcc514248.png)
+Válaszként, az UploadController-hez hasonlóan OK választ ad ha sikerült a kérést teljesíteni, ellenben BadRequest-et.
 
 ### 9. - 10.hét
-A hangotkat a jelen pillaatban a kártyakészítő, a főlektor, a fő grafikus (miután lektorálva lett), illetve a szaklektor és a fő szaklektor (grafikálás után) tudja módosítani. Ehhez legfőképp a car-form-component.ts fájlban dolgoztam. A képek, illetve a kérdés-válasz szövegek mintájára létrehoztam egy isSoundEditable függvényt, ami ezt felügyeli. A bejelentkezett felhasználó szerepköre és a kártyapakli állapota alapján eldönti, hogy ki szerkesztheti a hangot. Ezen kívül a szerepkörökkel mást nem kellett csinálni. 
+A hangotkat a jelen pillaatban a kártyakészítő, a főlektor, a fő grafikus (miután lektorálva lett), illetve a szaklektor és a fő szaklektor (grafikálás után) tudja módosítani. Ehhez legfőképp a car-form-component.ts fájlban dolgoztam. A képek, illetve a kérdés-válasz szövegek mintájára létrehoztam egy isSoundEditable függvényt, ami ezt felügyeli. A bejelentkezett felhasználó szerepköre és a kártyapakli állapota alapján eldönti, hogy ki szerkesztheti a hangot. 
+![image](https://user-images.githubusercontent.com/71429144/164445434-8c235c58-5513-4c2b-8faf-3807604df26e.png)
+Ezen kívül a szerepkörökkel mást nem kellett csinálni. 
