@@ -38,9 +38,11 @@ Sokszor ütköztem továbbá abba a hibába, hogy többszöri futtatásra másho
 ### 8.hét
 A hangok feltöltése már teljesen jól működik, ehhez a backenden egy külön UploadAudioController osztályt hoztam létre, az UploadController mintájára. Az 'api/UploadAudioController'-re érkező kéréseket dolgozza fel: elvégzi a fájl átnevezését, majd azt a Resources/ Sounds mappába helyezi el. 
 ![image](https://user-images.githubusercontent.com/71429144/164445207-9d2fe054-3cf1-4192-beb5-a15bcc514248.png)
+
 Válaszként, az UploadController-hez hasonlóan OK választ ad ha sikerült a kérést teljesíteni, ellenben BadRequest-et.
 
 ### 9. - 10.hét
 A hangotkat a jelen pillaatban a kártyakészítő, a főlektor, a fő grafikus (miután lektorálva lett), illetve a szaklektor és a fő szaklektor (grafikálás után) tudja módosítani. Ehhez legfőképp a car-form-component.ts fájlban dolgoztam. A képek, illetve a kérdés-válasz szövegek mintájára létrehoztam egy isSoundEditable függvényt, ami ezt felügyeli. A bejelentkezett felhasználó szerepköre és a kártyapakli állapota alapján eldönti, hogy ki szerkesztheti a hangot. 
 ![image](https://user-images.githubusercontent.com/71429144/164445434-8c235c58-5513-4c2b-8faf-3807604df26e.png)
+
 Ezen kívül a szerepkörökkel mást nem kellett csinálni. 
