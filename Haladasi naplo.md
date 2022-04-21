@@ -34,3 +34,9 @@ A frontenden az upload-sound.componenteken sokat kellett dolgozni, sok olyan hib
 ![image](https://user-images.githubusercontent.com/71429144/160946719-1daadb7b-8d69-4c1f-94d9-ffacaadf4845.png)
 Nem sikerült rájönnöm miért, ugaynis a tsconfig.json fájlban engedélyezve van ez. Ettől függetlenül lefut a program, és jól működik.
 Sokszor ütköztem továbbá abba a hibába, hogy többszöri futtatásra máshogy viselkedett a program (nem engedett képet felölteni, vagy hiányzott a kérdés-válasz szöveget szerkesztő mező).
+
+### 8.hét
+A hangok feltöltése már teljesen jól működik, ehhez a backenden egy külön UploadAudioController osztályt hoztam létre, az UploadController mintájára. Az 'api/UploadAudioController'-re érkező kéréseket dolgozza fel: elvégzi a fájl átnevezését, majd azt a Resources/ Sounds mappába helyezi el. Válaszként, az UploadController-hez hasonlóan OK választ ad ha sikerült a kérést teljesíteni, ellenben BadRequest-et.
+
+### 9. - 10.hét
+A hangotkat a jelen pillaatban a kártyakészítő, a főlektor, a fő grafikus (miután lektorálva lett), illetve a szaklektor és a fő szaklektor (grafikálás után) tudja módosítani. Ehhez legfőképp a car-form-component.ts fájlban dolgoztam. A képek, illetve a kérdés-válasz szövegek mintájára létrehoztam egy isSoundEditable függvényt, ami ezt felügyeli. A bejelentkezett felhasználó szerepköre és a kártyapakli állapota alapján eldönti, hogy ki szerkesztheti a hangot. Ezen kívül a szerepkörökkel mást nem kellett csinálni. 
