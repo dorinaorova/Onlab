@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiBaseUrl: 'https://tanulokartyak.azurewebsites.net'
+  apiBaseUrl: 'https://tanulokartya.azurewebsites.net'
 };
