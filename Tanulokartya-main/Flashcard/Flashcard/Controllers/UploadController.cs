@@ -25,23 +25,14 @@ namespace Flashcard.Controllers
             {
                 var file = Request.Form.Files[0];
                 var folderNameImage = Path.Combine("Resources", "Images");
-                var folderNameSounds = Path.Combine("Resources", "Sounds");
                 string pathToSave;
                 if (file.Length > 0)
                 {
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     
                     string dbPath;
-                    if (fileName.ToString().Contains("mp3")) {
-                         dbPath = Path.Combine(folderNameSounds, fileName);
-                        pathToSave= Path.Combine(Directory.GetCurrentDirectory(), folderNameSounds);
-
-                    }
-                    else {
-                         dbPath = Path.Combine(folderNameImage, fileName);
-                        pathToSave= Path.Combine(Directory.GetCurrentDirectory(), folderNameImage);
-
-                    }
+                    dbPath = Path.Combine(folderNameImage, fileName);
+                    pathToSave= Path.Combine(Directory.GetCurrentDirectory(), folderNameImage);
                     var fullPath = Path.Combine(pathToSave, fileName);
 
                     using (var stream = new FileStream(fullPath, FileMode.Create))
