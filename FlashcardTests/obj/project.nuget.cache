@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RH6uBHbutLg2+BXrc6mlRvFeQ/gBHVFi6m+5VfuTryJNU1mj1xSkf1/E+KmLw4cx3cS5v9TftFuSl/aODhcw8w==",
+  "dgSpecHash": "oPHZMByj9Vv5cMy0lQEBA5fQP9bL/8lkfCimTKY+ZlkxtHFGncJPcRLDd+7ok7rq+eKeQJzJCPGrpWeZu3G/Bg==",
   "success": true,
-  "projectFilePath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
+  "projectFilePath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\FlashcardTests\\FlashcardTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dorina\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Dorina\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

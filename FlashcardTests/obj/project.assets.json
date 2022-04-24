@@ -12267,11 +12267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
+      "projectUniqueName": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\FlashcardTests\\FlashcardTests.csproj",
       "projectName": "FlashcardTests",
-      "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\FlashcardTests\\FlashcardTests.csproj",
+      "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\FlashcardTests\\FlashcardTests.csproj",
       "packagesPath": "C:\\Users\\Dorina\\.nuget\\packages\\",
-      "outputPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\FlashcardTests\\obj\\",
+      "outputPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\FlashcardTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dorina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12288,8 +12288,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\Flashcard\\Flashcard.csproj": {
-              "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\Flashcard\\Flashcard.csproj"
+            "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\Flashcard.csproj": {
+              "projectPath": "C:\\BME\\Önlab\\OneDrive-2022-03-01\\Tanulokartya-main\\Onlab\\Flashcard\\Flashcard.csproj"
             }
           }
         }
