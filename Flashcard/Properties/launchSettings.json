@@ -20,7 +20,7 @@
     "Flashcard": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://tanulokartya.azurewebsites.net",
+      "applicationUrl": "https://localhost:4201;http://localhost:4200",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

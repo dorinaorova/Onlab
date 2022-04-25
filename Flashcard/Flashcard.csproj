@@ -13,6 +13,7 @@
     
     <!-- dll -->
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <UserSecretsId>b7092a7e-8b56-4d3b-8cc9-c89d3819a3d7</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
