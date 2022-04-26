@@ -8,6 +8,12 @@
       "type": "mssql.azure",
       "connectionId": "DefaultConnection",
       "secretStore": "LocalSecretsFile"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "DefaultConnectionProd",
+      "suggestion": "true",
+      "ignored": "true"
     }
   }
 }
