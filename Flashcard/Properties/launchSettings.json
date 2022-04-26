@@ -8,12 +8,22 @@
     }
   },
   "profiles": {
-    "Flashcard": {
-      "commandName": "Project",
+    /*
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://tanulokartya.azurewebsites.net"
+      }
+    },
+    */
+    "Flashcard": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "https://tanulokartya.azurewebsites.net", //"https://localhost:4201;http://localhost:4200",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }

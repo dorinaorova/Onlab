@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/tanulokartya/databases/TanulokartyaDB",
+      "type": "mssql.azure",
+      "connectionId": "DefaultConnectionProd",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
