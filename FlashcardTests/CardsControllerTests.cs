@@ -53,6 +53,8 @@ namespace FlashcardTests
                     Question_picture = "kep1",
                     Answer_text = "Teszt valasz",
                     Answer_picture = "kep 1",
+                    Question_sound = "hang1",
+                    Answer_sound = "hang1",
                     Deck = new Deck
                     {
                         Id = 1,
@@ -73,6 +75,8 @@ namespace FlashcardTests
                     Question_picture = "kep2",
                     Answer_text = "Teszt valasz 2",
                     Answer_picture = "kep 2",
+                    Question_sound = "hang2",
+                    Answer_sound = "hang2",
                     Deck = new Deck
                     {
                         Id = 1,
@@ -263,5 +267,18 @@ namespace FlashcardTests
             // Asssert
             Assert.IsType<NotFoundResult>(result);
         }
+
+
+        //Sound test
+        [Fact]
+        public async Task DeleteCardSound_UnknownIDPAssed_ReturnsNotFound() {
+            var controller = new CardsController(flashcardDbContextMock.Object, logger);
+            int unknownId = 22;
+
+            var result = await controller.DeleteCardSound(unknownId, "question");
+
+            Assert.IsType<NotFoundResult>(result);
+        }
+
     }
 }
