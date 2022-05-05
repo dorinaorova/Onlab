@@ -40,3 +40,14 @@ A hangok feltöltése már teljesen jól működik, ehhez a backenden egy külö
 A backenden ezen kívül 
 ### 9. - 10.hét
 A hangotkat a jelen pillaatban a kártyakészítő, a főlektor, a fő grafikus (miután lektorálva lett), illetve a szaklektor és a fő szaklektor (grafikálás után) tudja módosítani. Ehhez legfőképp a car-form-component.ts fájlban dolgoztam. A képek, illetve a kérdés-válasz szövegek mintájára létrehoztam egy isSoundEditable függvényt, ami ezt felügyeli. A bejelentkezett felhasználó szerepköre és a kártyapakli állapota alapján eldönti, hogy ki szerkesztheti a hangot. Ezen kívül a szerepkörökkel mást nem kellett csinálni. 
+
+### 11.hét
+Az adatbázist és magát a projektet is feltettem Azureba. Az adatbázishoz egy SQl adatbázist hoztam létre, ezzel kapcsoltam össze projektet. Nehézséget okozott, hogy a kapcsolati stringet sok helyen meg kellett változtatni, emiatt előszőr csak lokálisan futtatva látva aza datbázist, Azure-ról nem. 
+A projekt feltelepítése sokkal nehezebben ment, sok hibába is ütköztem. Ezt a hibaüzenetet kaptam sokszor: 500.30 - asp.net core app failed to start, amiből nehéz volt következtetni a hiba pontos okára. Az Azure-os konzolból az exe fájlt futtatva már több és pontosabb hibaüzenetet kaptam. KEzdetben az adatbázist nem látta rendesen, majd amikor sikerült kicserélni ezt mindenhol, tanusítvány hiányát jelezte.
+![image](https://user-images.githubusercontent.com/71429144/167009668-66321b80-f684-40ff-93e0-b7645534a6fd.png)
+
+
+### 12. hét
+Sikerült kijavítani a múltheti problémákat. Kezdetben próbálkoztam egy selfsigned tanúsítvány létrehozásával, viszont így sem akart működni. Hosszas keresgélés után találtam másik emgoldást, az appsettings.json fájlban kellett átírni a Key Type-ot Store-ról Developmentre. 
+A projekt a következő címen érhető el: https://tanulokartya.azurewebsites.net/deck-list
+Ezek mellett teszteket készítettem, amik főként a hangok hozzááadásának és törlésének működését ellenőrzik: kitörlődik-e a kérdés/válasz hang, megfelelő választ ad-e ha nem jó id-u kártyát adunk meg, átíródik-e a hang, ha frissítjük a kártyát, illetve a hang is hozzáadódik-e a új kártyát veszünk fel.
