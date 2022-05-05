@@ -149,7 +149,7 @@ export class CardFormComponent implements OnInit {
   isSoundEditable() {
     if ((this.currentUser.roles.includes("Card creator") && this.deckStatus == 0 && this.deckAuthorId === this.currentUser.id) ||
       this.currentUser.roles.includes("Main Lector") && this.deckStatus == 0 ||
-      (this.currentUser.roles.includes("Main Graphic") && this.deckStatus == 1) ||
+      (this.currentUser.roles.includes("Lector") && this.deckStatus == 0) ||
       this.currentUser.roles.includes("Professional reviewer") && this.deckStatus == 2 ||
       this.currentUser.roles.includes("Main Professional reviewer") && this.deckStatus == 2) {
       return true; // enabled

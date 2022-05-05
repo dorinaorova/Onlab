@@ -566,3 +566,15 @@ C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Deb
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.pdb
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.genruntimeconfig.cache
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Certificates.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Keys.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.AzureAppServices.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Text.Json.dll
