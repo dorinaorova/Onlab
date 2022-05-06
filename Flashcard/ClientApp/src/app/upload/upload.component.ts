@@ -22,7 +22,6 @@ export class UploadComponent implements OnInit {
  
   ngOnInit() {
     this.errorflag = true;
-    this.isSound = false;
   }
  
   /**
@@ -38,46 +37,15 @@ export class UploadComponent implements OnInit {
 
       // File extension validation
       this.message_error = 'Nem jó a fájlformátum!';
-      var _validFileExtensions = ["jpg", "jpeg", "png", "audio/mpeg"];
+      var _validFileExtensions = ["jpg", "jpeg", "png"];
       for (var j = 0; j < _validFileExtensions.length; j++) {
         var sCurExtension = _validFileExtensions[j];
         if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-          if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == "audio/mpeg") {
-            this.isSound = true;
-          }
           this.errorflag = false;
           this.message_error = '';
         }
       }
       if (this.errorflag == false) {
-        if (this.isSound == true) {
-          
-          let sound = new Audio();
-          sound.src = window.URL.createObjectURL(file);
-          reader.readAsDataURL(file);
-          setTimeout(() => {
-            this.message_error = "";
-            let fileToUpload = <File>files[0];
-            const formData = new FormData();
-            let date = new Date();
-            let currentDate = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate() + "_" + date.getHours();
-            let fileToUploadName = currentDate + "_" + fileToUpload.name;
-            formData.append('file', fileToUpload, fileToUploadName);
-
-            this.http.post(`${environment.apiBaseUrl}/api/UploadAudio`, formData, { reportProgress: true, observe: 'events' })
-              .subscribe(event => {
-                if (event.type === HttpEventType.UploadProgress)
-                  this.progress = Math.round(100 * event.loaded / event.total);
-                else if (event.type === HttpEventType.Response) {
-                  this.message_error = '';
-                  this.message = 'Sikeres hang feltöltés!';
-                  this.onUploadFinished.emit(event.body);
-                  this.errorflag = true;
-                }
-              });
-            }, 2000);
-        }
-        else {
           let img = new Image();
           img.src = window.URL.createObjectURL(file);
           reader.readAsDataURL(file);
@@ -116,7 +84,7 @@ export class UploadComponent implements OnInit {
               }
             }, 2000);
           };
-        }
+        
       }      
     }
   }

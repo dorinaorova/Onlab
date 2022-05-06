@@ -58,7 +58,7 @@ export class UploadSoundComponent implements OnInit {
                   this.progress = Math.round(100 * event.loaded / event.total);
                 else if (event.type === HttpEventType.Response) {
                   this.message_error = '';
-                  this.message = 'Sikeres hang feltöltés!';
+                  this.message = 'Sikeres hangfeltöltés!';
                   this.onSoundUploadFinished.emit(event.body);
                   this.errorflag = true;
                 }
