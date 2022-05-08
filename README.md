@@ -1,4 +1,7 @@
 # Tanulókártya
+[![Build and deploy ASP.Net Core app to Azure Web App - Tanulokartya](https://github.com/dorinaorova/Onlab/actions/workflows/main_tanulokartya.yml/badge.svg)](https://github.com/dorinaorova/Onlab/actions/workflows/main_tanulokartya.yml)
+
+
 ## Jakabovics Zsombor - EA38MN
 
 #### Szakdolgozatom céljaként fullstack webalkalmazást készítettem korszerű technológiák felhasználásával, amely segítséget nyújt a pedagógusok számára a tananyagfejlesztésben és ezzel a hatékonyabb munkavégzésben.
