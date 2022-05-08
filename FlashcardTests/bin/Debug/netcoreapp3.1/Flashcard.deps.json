@@ -45,6 +45,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "3.1.5",
           "Microsoft.Extensions.Logging.AzureAppServices": "6.0.4",
           "Microsoft.Extensions.Logging.Debug": "3.1.0-preview1.19506.1",
+          "Microsoft.TypeScript.MSBuild": "4.6.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.0-preview1-19509-03",
           "NETCore.MailKit": "2.0.3",
           "NSwag.AspNetCore": "13.7.0",
@@ -1850,6 +1851,7 @@
       },
       "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.TypeScript.MSBuild/4.6.4": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0-preview1-19509-03": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
@@ -2367,11 +2369,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.ComponentModel.Annotations/4.7.0": {
-        "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
-        }
-      },
+      "System.ComponentModel.Annotations/4.7.0": {},
       "System.ComponentModel.Primitives/4.3.0": {
         "dependencies": {
           "System.ComponentModel": "4.3.0",
@@ -5656,6 +5654,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.TypeScript.MSBuild/4.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G6cBFIGapWt85/Zi17GL2PBboy/6Xt2vZNmZj0xHXuKHbqbULKKvClHyiIfzAFCN10QqgVt0e9fxwC/1A1CcAA==",
+      "path": "microsoft.typescript.msbuild/4.6.4",
+      "hashPath": "microsoft.typescript.msbuild.4.6.4.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.1.0-preview1-19509-03": {
       "type": "package",

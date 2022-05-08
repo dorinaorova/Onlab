@@ -558,7 +558,6 @@ C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Deb
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\Flashcard.pdb
-C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.csprojAssemblyReference.cache
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.AssemblyInfoInputs.cache
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.AssemblyInfo.cs
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.csproj.CoreCompileInputs.cache
@@ -578,3 +577,5 @@ C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Deb
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.csproj.AssemblyReference.cache
+C:\BME\Önlab\OneDrive-2022-03-01\Tanulokartya-main\Onlab\FlashcardTests\obj\Debug\netcoreapp3.1\FlashcardTests.GeneratedMSBuildEditorConfig.editorconfig
