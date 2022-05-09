@@ -19,7 +19,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: '3.1.301'
           include-prerelease: true
 
       - name: Build with dotnet
@@ -33,7 +33,6 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-          
 
   deploy:
     runs-on: windows-latest
@@ -54,5 +53,5 @@ jobs:
         with:
           app-name: 'Tanulokartya'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_932F9AF3DF6F48C694D2764ED93BB79A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8DEF49A8DB544995AC2AC1D732F0628F }}
           package: .
