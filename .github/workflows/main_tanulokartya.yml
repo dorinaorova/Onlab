@@ -21,9 +21,6 @@ jobs:
         with:
           dotnet-version: '5.0.x'
           include-prerelease: true
-          
-      - name: Install dependencies
-      run: dotnet restore
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
@@ -36,8 +33,6 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
           
 
   deploy:
