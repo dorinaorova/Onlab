@@ -14,7 +14,6 @@ export class UploadComponent implements OnInit {
   public progress: number;
   public message: string;
   public message_error: string;
-  public isSound: boolean;
   errorflag: boolean;
   @Output() public onUploadFinished = new EventEmitter();
  

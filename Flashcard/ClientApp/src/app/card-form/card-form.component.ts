@@ -135,7 +135,6 @@ export class CardFormComponent implements OnInit {
         }
         return false; // disabled
     }
-
     isPictureEditable() {
       if((this.currentUser.roles.includes("Card creator") && this.deckStatus == 0) ||
         (this.currentUser.roles.includes("Graphic") && this.deckStatus == 1) ||
@@ -146,7 +145,7 @@ export class CardFormComponent implements OnInit {
         }
         return false; // disabled
     }
-  isSoundEditable() {
+    isSoundEditable() {
     if ((this.currentUser.roles.includes("Card creator") && this.deckStatus == 0 && this.deckAuthorId === this.currentUser.id) ||
       this.currentUser.roles.includes("Main Lector") && this.deckStatus == 0 ||
       (this.currentUser.roles.includes("Lector") && this.deckStatus == 0) ||

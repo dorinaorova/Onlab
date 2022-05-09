@@ -1,6 +1,6 @@
 <div class="row" style="margin-bottom:15px;">
   <div class="col-md-3">
-    <input type="file" accept=".jpg, .jpeg, .png, .audio/mpeg" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+    <input type="file" accept=".jpg, .jpeg, .png" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
     <button type="button" class="btn btn-success" (click)="file.click()">Feltöltés</button>
   </div>
   <div class="col-md-4">

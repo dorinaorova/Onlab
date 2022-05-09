@@ -80,7 +80,7 @@
     <div class="col-md-12">
       <div *ngIf="actionType!='Új'">
         <audio controls *ngIf="isQuestionSound" class="center" alt="question_sound">
-          <source [src]="createSoundPath(card.question_sound)" type="audio/mp3" />
+          <source [src]="createSoundPath(QuestionSound)" type="audio/mp3" />
         </audio>
         <a *ngIf="isQuestionSound" [routerLink]="" (click)="deleteSound(cardId, 'question')" class="btn btn-danger button">Törlés</a>
       </div>
@@ -150,13 +150,13 @@
   </div>
 
   <div class="form-group row" *ngIf="isSoundEditable()">
-    <label class="control-label col-md-12">Kérdés hang (opcionális)</label>
+    <label class="control-label col-md-12">Válasz hang (opcionális)</label>
     <div class="col-md-12">
       <div *ngIf="actionType!='Új'">
-        <audio controls *ngIf="isAnswerSound" class="center" alt="question_sound">
-          <source [src]="createSoundPath(card.answer_sound)" type="audio/mp3" />
+        <audio controls *ngIf="isAnswerSound" class="center" alt="answer_sound">
+          <source [src]="createSoundPath(AnswerSound)" type="audio/mp3" />
         </audio>
-        <a *ngIf="isAnswerSound" [routerLink]="" (click)="deleteSound(cardId, 'question')" class="btn btn-danger button">Törlés</a>
+        <a *ngIf="isAnswerSound" [routerLink]="" (click)="deleteSound(cardId, 'answer')" class="btn btn-danger button">Törlés</a>
       </div>
       <div>
         <!-- Upload answer sound component -->
