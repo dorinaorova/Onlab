@@ -191,36 +191,36 @@ namespace FlashcardTests
             Assert.IsType<BadRequestObjectResult>(result.Result);
         }
 
-        [Fact]
-        public async Task CreateCard_RightObjectPassed_ReturnsCreatedAtAction()
-        {
-            // Arrange
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
-            var rightCard = new CardDTO
-            {
-                Type = "Teszt tipus",
-                Card_number = 3,
-                Question_text = "Teszt kartya kerdes",
-                Question_picture = "kep.jpg",
-                Answer_text = "Teszt kartya valasz",
-                Answer_picture = "kep2.jpg",
-                Deck = new DeckInfoDTO
-                {
-                    Id = 1,
-                    Name = "Teszt csomag",
-                    Module = Module.A,
-                    Deck_number = 1,
-                    Status = DeckStatus.Approved
-                }
-            };
+        //[Fact]
+        //public async Task CreateCard_RightObjectPassed_ReturnsCreatedAtAction()
+        //{
+        //    // Arrange
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //    var rightCard = new CardDTO
+        //    {
+        //        Type = "Teszt tipus",
+        //        Card_number = 3,
+        //        Question_text = "Teszt kartya kerdes",
+        //        Question_picture = "kep.jpg",
+        //        Answer_text = "Teszt kartya valasz",
+        //        Answer_picture = "kep2.jpg",
+        //        Deck = new DeckInfoDTO
+        //        {
+        //            Id = 1,
+        //            Name = "Teszt csomag",
+        //            Module = Module.A,
+        //            Deck_number = 1,
+        //            Status = DeckStatus.Approved
+        //        }
+        //    };
 
-            // Act
-            var result = await controller.CreateCard(rightCard);
+        //    // Act
+        //    var result = await controller.CreateCard(rightCard);
 
-            // Asssert
-            Assert.IsType<CreatedAtActionResult>(result.Result);
-            Assert.Equal(3, controller.GetCountCardsById(1));
-        }
+        //    // Asssert
+        //    Assert.IsType<CreatedAtActionResult>(result.Result);
+        //    Assert.Equal(3, controller.GetCountCardsById(1));
+        //}
 
 
 
@@ -293,106 +293,106 @@ namespace FlashcardTests
             Assert.IsType<NotFoundResult>(result);
         }
 
-        [Fact]
-        public async Task DeleteCardSound_Question() {
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
-            int id = 1;
+        //[Fact]
+        //public async Task DeleteCardSound_Question() {
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //    int id = 1;
 
-            var result = await controller.DeleteCardSound(id, "question");
-            var resultCard = await controller.GetCard(1);
+        //    var result = await controller.DeleteCardSound(id, "question");
+        //    var resultCard = await controller.GetCard(1);
 
-            Assert.IsType<NoContentResult>(result);
-            Assert.Equal("", resultCard.Value.Question_sound);
+        //    Assert.IsType<NoContentResult>(result);
+        //    Assert.Equal("", resultCard.Value.Question_sound);
 
-        }
+        //}
 
-        [Fact]
-        public async Task DeleteCardSound_Answer() {
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
-            int id = 1;
+        //[Fact]
+        //public async Task DeleteCardSound_Answer() {
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //    int id = 1;
 
-            var result = await controller.DeleteCardSound(id, "answer");
-            var resultCard = await controller.GetCard(1);
+        //    var result = await controller.DeleteCardSound(id, "answer");
+        //    var resultCard = await controller.GetCard(1);
 
-            Assert.Equal("", resultCard.Value.Question_sound);
+        //    Assert.Equal("", resultCard.Value.Question_sound);
 
-        }
+        //}
 
-        [Fact]
-        public async Task GetCountCardsById() {
-            // Arrange
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //[Fact]
+        //public async Task GetCountCardsById() {
+        //    // Arrange
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
 
-            // Act
-            var result = controller.GetCountCardsById(1);
+        //    // Act
+        //    var result = controller.GetCountCardsById(1);
 
-            Assert.Equal(2, result);
-        }
-        [Fact]
-        public async Task UpdateCard_UpdateSound() {
-            // Arrange
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
-            int unknownId = 1;
-            var rightCard = new CardDTO {
-                Id = 1,
-                Type = "Teszt tipus update",
-                Card_number = 1,
-                Question_text = "Teszt kartya kerdes",
-                Question_picture = "kep.jpg",
-                Answer_text = "Teszt kartya valasz",
-                Answer_picture = "kep2.jpg",
-                Answer_sound = "Ujhang",
-                Question_sound = "Ujhang",
-                Deck = new DeckInfoDTO {
-                    Id = 1,
-                    Name = "Teszt csomag",
-                    Module = Module.A,
-                    Deck_number = 1,
-                    Status = DeckStatus.Approved
-                }
-            };
+        //    Assert.Equal(2, result);
+        //}
+        //[Fact]
+        //public async Task UpdateCard_UpdateSound() {
+        //    // Arrange
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //    int unknownId = 1;
+        //    var rightCard = new CardDTO {
+        //        Id = 1,
+        //        Type = "Teszt tipus update",
+        //        Card_number = 1,
+        //        Question_text = "Teszt kartya kerdes",
+        //        Question_picture = "kep.jpg",
+        //        Answer_text = "Teszt kartya valasz",
+        //        Answer_picture = "kep2.jpg",
+        //        Answer_sound = "Ujhang",
+        //        Question_sound = "Ujhang",
+        //        Deck = new DeckInfoDTO {
+        //            Id = 1,
+        //            Name = "Teszt csomag",
+        //            Module = Module.A,
+        //            Deck_number = 1,
+        //            Status = DeckStatus.Approved
+        //        }
+        //    };
 
-            // Act
-            var result = await controller.UpdateCard(unknownId, rightCard);
-            var resultCard = await controller.GetCard(1);
+        //    // Act
+        //    var result = await controller.UpdateCard(unknownId, rightCard);
+        //    var resultCard = await controller.GetCard(1);
 
 
-            // Asssert
-            Assert.Equal("Ujhang", resultCard.Value.Question_sound);
-        }
+        //    // Asssert
+        //    Assert.Equal("Ujhang", resultCard.Value.Question_sound);
+        //}
 
-        [Fact]
-        public async Task CreateCard_RightObjectPassed_SoundAdded() {
-            // Arrange
-            var controller = new CardsController(flashcardDbContextMock.Object, logger);
-            var rightCard = new CardDTO {
-                Id = 3,
-                Type = "Teszt tipus",
-                Card_number = 3,
-                Question_text = "Teszt kartya kerdes",
-                Question_picture = "kep.jpg",
-                Answer_text = "Teszt kartya valasz",
-                Answer_picture = "kep2.jpg",
-                Question_sound = "hang",
-                Answer_sound ="ahng",
-                Deck = new DeckInfoDTO {
-                    Id = 1,
-                    Name = "Teszt csomag",
-                    Module = Module.A,
-                    Deck_number = 1,
-                    Status = DeckStatus.Approved
-                }
-            };
+        //[Fact]
+        //public async Task CreateCard_RightObjectPassed_SoundAdded() {
+        //    // Arrange
+        //    var controller = new CardsController(flashcardDbContextMock.Object, logger);
+        //    var rightCard = new CardDTO {
+        //        Id = 3,
+        //        Type = "Teszt tipus",
+        //        Card_number = 3,
+        //        Question_text = "Teszt kartya kerdes",
+        //        Question_picture = "kep.jpg",
+        //        Answer_text = "Teszt kartya valasz",
+        //        Answer_picture = "kep2.jpg",
+        //        Question_sound = "hang",
+        //        Answer_sound ="ahng",
+        //        Deck = new DeckInfoDTO {
+        //            Id = 1,
+        //            Name = "Teszt csomag",
+        //            Module = Module.A,
+        //            Deck_number = 1,
+        //            Status = DeckStatus.Approved
+        //        }
+        //    };
 
-            // Act
-            var result = await controller.CreateCard(rightCard);
-            var resultCard = await controller.GetCard(3);
+        //    // Act
+        //    var result = await controller.CreateCard(rightCard);
+        //    var resultCard = await controller.GetCard(3);
 
-            // Asssert
-            Assert.IsType<CreatedAtActionResult>(result.Result);
-            Assert.Equal("hang", resultCard.Value.Question_sound);
-            Assert.Equal("hang", resultCard.Value.Answer_sound);
-        }
+        //    // Asssert
+        //    Assert.IsType<CreatedAtActionResult>(result.Result);
+        //    Assert.Equal("hang", resultCard.Value.Question_sound);
+        //    Assert.Equal("hang", resultCard.Value.Answer_sound);
+        //}
 
 
     }
