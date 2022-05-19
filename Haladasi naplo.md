@@ -49,5 +49,5 @@ A projekt feltelepítése sokkal nehezebben ment, sok hibába is ütköztem. Ezt
 
 ### 12. hét
 Sikerült kijavítani a múltheti problémákat. Kezdetben próbálkoztam egy selfsigned tanúsítvány létrehozásával, viszont így sem akart működni. Hosszas keresgélés után találtam másik emgoldást, az appsettings.json fájlban kellett átírni a Key Type-ot Store-ról Developmentre. 
-A projekt a következő címen érhető el: https://tanulokartya.azurewebsites.net/deck-list
+A projekt a következő címen érhető el: https://tanulokartya.azurewebsites.net/
 Ezek mellett teszteket készítettem, amik főként a hangok hozzááadásának és törlésének működését ellenőrzik: kitörlődik-e a kérdés/válasz hang, megfelelő választ ad-e ha nem jó id-u kártyát adunk meg, átíródik-e a hang, ha frissítjük a kártyát, illetve a hang is hozzáadódik-e a új kártyát veszünk fel.
