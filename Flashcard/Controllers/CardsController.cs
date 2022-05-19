@@ -235,8 +235,8 @@ namespace Flashcard.Controllers
         /// <summary>
         /// This function deletes an existing card's specified picture.
         /// </summary>
-        // PUT: api/Cards/DeleteCardPicture/2/type
-        [Authorize(Roles = "Card creator,Lector,Main Lector,Graphic,Main Graphic,Professional reviewer,Main Professional reviewer")]
+        // PUT: api/Cards/DeleteCardSound/2/type
+        [Authorize(Roles = "Card creator,Lector,Main Lector,Professional reviewer,Main Professional reviewer")]
         [ActionName("DeleteCardSound")]
         [HttpPut("[action]/{id}/{type}")]
         public async Task<ActionResult> DeleteCardSound([FromRoute] int id, [FromRoute] string type) {
