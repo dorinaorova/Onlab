@@ -19,7 +19,7 @@ export class UploadSoundComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
     ngOnInit(): void {
-      this.errorflag = false;
+      this.errorflag = true;
   }
 
   public uploadFile = (files) => {
@@ -29,16 +29,13 @@ export class UploadSoundComponent implements OnInit {
     let reader = new FileReader();
     if (files && files.length > 0) {
       let file = files[0];
-
       this.message_error = 'Nem jó a fájlformátum!';
-      var _validFileExtensions = ["audio/mpeg"];
-      for (var j = 0; j < _validFileExtensions.length; j++) {
-        var sCurExtension = _validFileExtensions[j];
+      var sCurExtension = "audio/mpeg"
         if (file.type.substr(file.type.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
           this.errorflag = false;
           this.message_error = '';
         }
-      }
+      
       if (this.errorflag == false) {
           let sound = new Audio();
           sound.src = window.URL.createObjectURL(file);
